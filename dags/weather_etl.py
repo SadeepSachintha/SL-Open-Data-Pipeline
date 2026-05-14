@@ -10,6 +10,7 @@ import sys
 # Add scripts directory to path
 sys.path.append('/opt/airflow/scripts')
 from utils import upload_to_s3, create_bucket_if_not_exists, get_mongo_client
+from data_quality import validate_weather_data
 
 default_args = {
     'owner': 'antigravity',
@@ -46,9 +47,6 @@ def transform_weather(ti):
     """Transform raw weather data into a structured format."""
     s3_key = ti.xcom_pull(task_ids='extract_weather_task')
     
-    # In a real scenario, we would download from S3 here. 
-    # For simplicity, we'll reuse the temp file if available, or fetch from S3.
-    # To keep it "Scalable", let's simulate the download.
     import boto3
     from botocore.client import Config
     
@@ -85,6 +83,9 @@ def load_to_mongodb(ti):
     """Load transformed data into MongoDB."""
     processed_file = ti.xcom_pull(task_ids='transform_weather_task')
     df = pd.read_parquet(processed_file)
+    
+    # Data Quality Check
+    validate_weather_data(df)
     
     client = get_mongo_client()
     db = client['sl_open_data']

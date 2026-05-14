@@ -9,7 +9,7 @@ then
 fi
 
 # Start the containers
-docker-compose up -d
+docker compose up -d
 
 echo ""
 echo "======================================================"

@@ -14,7 +14,7 @@ This project demonstrates a production-grade ETL (Extract, Transform, Load) arch
     - **PostgreSQL (SQL)** for highly structured Market Prices.
     - **MongoDB (NoSQL)** for flexible, high-frequency Weather data.
 *   **DataOps Integrity**: Integrated validation layer using custom logic to ensure data quality and schema enforcement.
-*   **Containerized Portability**: Entire stack is deployable via a single `docker-compose` command.
+*   **Containerized Portability**: Entire stack is deployable via a single `docker compose` command.
 
 ---
 
@@ -48,7 +48,7 @@ This project demonstrates a production-grade ETL (Extract, Transform, Load) arch
 ## 🛠️ Getting Started
 
 ### 1. Prerequisites
-- Docker & Docker Compose
+- Docker & Docker Compose (V2)
 - 4GB+ RAM allocated to Docker
 
 ### 2. Launching the Stack

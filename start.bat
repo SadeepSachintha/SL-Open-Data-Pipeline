@@ -10,7 +10,7 @@ if %errorlevel% neq 0 (
 )
 
 :: Start the containers
-docker-compose up -d
+docker compose up -d
 
 echo.
 echo ======================================================

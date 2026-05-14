@@ -67,7 +67,7 @@ chmod +x start.sh stop.sh
 ### 3. Service Dashboard
 | Service | URL | Credentials |
 | :--- | :--- | :--- |
-| **Airflow UI** | [http://localhost:8080](http://localhost:8080) | `airflow` / `airflow` |
+| **Airflow UI** | [http://localhost:8081](http://localhost:8081) | `airflow` / `airflow` |
 | **MinIO Console** | [http://localhost:9001](http://localhost:9001) | `minioadmin` / `minioadmin` |
 | **MongoDB** | `localhost:27017` | `admin` / `password` |
 | **PostgreSQL** | `localhost:5432` | `airflow` / `airflow` |

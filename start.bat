@@ -16,7 +16,7 @@ echo.
 echo ======================================================
 echo Pipeline is starting up!
 echo ======================================================
-echo Airflow: http://localhost:8080 (airflow/airflow)
+echo Airflow: http://localhost:8081 (airflow/airflow)
 echo MinIO:   http://localhost:9001 (minioadmin/minioadmin)
 echo ======================================================
 echo.

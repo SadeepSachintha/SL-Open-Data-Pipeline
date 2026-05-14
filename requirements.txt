@@ -1,0 +1,9 @@
+apache-airflow[amazon,postgres,mongo]==2.7.1
+boto3
+pymongo
+pandas
+great-expectations
+requests
+psycopg2-binary
+openpyxl
+pyarrow
